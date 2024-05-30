@@ -1,0 +1,13 @@
+CREATE OR REPLACE FUNCTION direction_group_count()
+RETURNS INTEGER
+
+AS $$
+DECLARE 
+	RESULT INT DEFAULT NULL;
+BEGIN
+	SELECT COUNT(DISTINCT LEFT(direction_code, 2)) INTO RESULT FROM direction;
+	RETURN RESULT;
+END; $$
+LANGUAGE plpgsql;
+
+SELECT direction_group_count();
