@@ -1,6 +1,6 @@
 # Project Title
 
-Uviversity Data Base
+University Data Base
 
 ## Description
 
