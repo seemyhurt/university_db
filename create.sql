@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS exam(
 CREATE TABLE IF NOT EXISTS direction_exam(
 	exam_id INT NOT NULL,
 	direction_id INT NOT NULL,
-	isRequired BOOL DEFAULT FALSE,
+	is_required BOOL DEFAULT FALSE,
 	PRIMARY KEY(exam_id, direction_id),
 	FOREIGN KEY(exam_id) REFERENCES exam(exam_id) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(direction_id) REFERENCES direction(direction_id) ON DELETE CASCADE ON UPDATE CASCADE
